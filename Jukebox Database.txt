@@ -1,0 +1,34 @@
+create table User(userId int primary key,userName char(25),userMailId char (25));
+select * from user;
+  
+create table Song(songId int primary key,songName char(30),duration char(10),artist char(20),genere char(20),songPath char(150));
+select * from song;
+
+insert into Song values(101,'Bekhayali','4.45','Kishore_Kumar','Old Classical','C:\\Users\\User\\eclipse-workspace\\Jukebox\\src\\Resources\\Songs\\Bekhayali.wav');
+insert into Song values(102,'Bilanshi-Nagin-Nighali','3.09','Rahat_Khan','Sufi','C:\\Users\\User\\eclipse-workspace\\Jukebox\\src\\Resources\\Songs\\Bilanshi-Nagin-Nighali.wav');
+insert into Song values(103,'Ed-Sheeran','2.35','Honey_Singh','Hip-Hop','C:\\Users\\User\\eclipse-workspace\\Jukebox\\src\\Resources\\Songs\\Ed-Sheeran.wav');
+insert into Song values(104,'Savage-Love','2.52','Darshan_Raval','Pop','C:\\Users\\User\\eclipse-workspace\\Jukebox\\src\\Resources\\Songs\\Savage-Love.wav');
+insert into Song values(105,'Main-Teri-Ho-Gayi','2.52','Darshan_Raval','Pop','C:\\Users\\User\\eclipse-workspace\\Jukebox\\src\\Resources\\Songs\\Main-Teri-Ho-Gayi.wav');
+
+select * from Song;
+
+create table Podcast(podcastId int primary key,podcastName char(30),duration char(10),celebrity char(20),category char(20),podcastPath char(150),episodeNo int);
+select * from Podcast;
+
+insert into Podcast values(201,'Relationship_In_Business','15.23','Sadhguru','Spiritual','C:\\Users\\User\\eclipse-workspace\\Jukebox\\src\\Resources\\Podcasts\\Relationship_In_Business.wav',1);
+insert into Podcast values(202,'Deep_learning','7.49','Robert_Harris','Technology','C:\\Users\\User\\eclipse-workspace\\Jukebox\\src\\Resources\\Podcasts\\Deep_learning.wav',1);
+insert into Podcast values(203,'Intelligent_Design','8.32','Jack_Ross','Science','C:\\Users\\User\\eclipse-workspace\\Jukebox\\src\\Resources\\Podcasts\\Intelligentdesign.wav',1);
+insert into Podcast values(204,'Yoga','12.56','Hannah','Yoga','C:\\Users\\User\\eclipse-workspace\\Jukebox\\src\\Resources\\Podcasts\\Yoga.wav',1);
+insert into Podcast values(205,'Relationship_In_Business','9.49','Morris_K','Business','C:\\Users\\User\\eclipse-workspace\\Jukebox\\src\\Resources\\Podcasts\\Relationship_In_Business.wav',1);
+
+create table Playlist(playlistId int primary key,playlistName char(20),userId int,foreign key(userId) references User(userId));
+select * from playlist;
+  
+create table PlaylistDetails(playlistId int,playlistName char(20),songOrPodcastName  char(20)); 
+select * from PlaylistDetails;
+
+
+
+
+
+
